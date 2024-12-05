@@ -29,10 +29,24 @@ body {
     /* text-align: center; */
     /* margin-left: 50%; */
     /* margin-right: 50%; */
+    padding: 3.1rem 0 2.6rem 0;
 }
 
 main {
     background-color: white;
+    border-radius: 5% 5% 0 0;
+}
+
+form {
+    /* display: block; */
+}
+
+label {
+    
+}
+
+input {
+    display: block;
 }
 
 .attribution { font-size: 11px; text-align: center; }
