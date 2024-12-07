@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
     font-size: 24px;
     background-color: var(--Light-grayish-cyan);
+    font-family: Space Mono, Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -35,6 +36,7 @@ body {
 main {
     background-color: white;
     border-radius: 5% 5% 0 0;
+    padding: 1.5rem 2rem;
 }
 
 form {
@@ -42,11 +44,16 @@ form {
 }
 
 label {
-    
+    color: var(--Dark-grayish-cyan);
+    font-size: 1rem;
 }
 
 input {
     display: block;
+}
+
+.bill {
+    background-image: url(images/icon-dollar.svg);
 }
 
 .attribution { font-size: 11px; text-align: center; }
