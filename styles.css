@@ -50,10 +50,16 @@ label {
 
 input {
     display: block;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    color: var(--Dark-grayish-cyan);
 }
 
 .bill {
     background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
 }
 
 .attribution { font-size: 11px; text-align: center; }
