@@ -24,6 +24,7 @@ body {
     font-size: 24px;
     background-color: var(--Light-grayish-cyan);
     font-family: Space Mono, Arial, Helvetica, sans-serif;
+    /* max-height: 100vh; */
 }
 
 .logo {
@@ -57,19 +58,26 @@ input {
     background-color: var(--Very-light-grayish-cyan);
     border: none;
     color: var(--Dark-grayish-cyan);
+    background-repeat: no-repeat;
+    background-position: 7% 50%;
+}
+
+input:hover {
+    cursor: pointer;
+    border: solid var(--Strong-cyan);
+    outline: none;
+    /* border-color: aqua; */
 }
 
 .bill {
     background-image: url(images/icon-dollar.svg);
-    background-repeat: no-repeat;
-    background-position: 7% 50%;
-    padding-bottom: 4.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.bill:focus {
+/* .bill:focus {
     border-color: var(--Strong-cyan);
-    outline: none;
-}
+    
+} */
 
 .buttons {
     display: grid;
@@ -96,6 +104,19 @@ button {
     letter-spacing: 0.03rem;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.Number_of_People {
+    background-image: url(images/icon-person.svg);
+}
 
-.attribution a { color: hsl(228, 45%, 44%); }
+.Number_of_People:hover {
+    /* margin: 1rem; */
+
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
