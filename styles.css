@@ -42,9 +42,9 @@ main {
     padding: 1.5rem 2rem;
 }
 
-form {
+/* form {
     /* display: block; */
-}
+/*} */
 
 label {
     color: var(--Dark-grayish-cyan);
@@ -57,16 +57,23 @@ input {
     height: 3rem;
     background-color: var(--Very-light-grayish-cyan);
     border: none;
+    /* outline: none; */
     color: var(--Dark-grayish-cyan);
     background-repeat: no-repeat;
     background-position: 7% 50%;
 }
 
-input:hover {
-    cursor: pointer;
+/*input:hover {
+    /* cursor: pointer; */
+    /* border: solid var(--Strong-cyan);
+    outline: none; */
+    /* border-color: aqua; */
+/*}*/
+
+input:focus {
+    text-align: right;
     border: solid var(--Strong-cyan);
     outline: none;
-    /* border-color: aqua; */
 }
 
 .bill {
@@ -108,10 +115,10 @@ button {
     background-image: url(images/icon-person.svg);
 }
 
-.Number_of_People:hover {
+/* .Number_of_People:hover {
     /* margin: 1rem; */
 
-}
+/*} */
 
 .attribution { 
     font-size: 11px; text-align: center; 
