@@ -49,6 +49,7 @@ main {
 label {
     color: var(--Dark-grayish-cyan);
     font-size: 1rem;
+    /* font-weight: 400; */
 }
 
 input {
