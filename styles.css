@@ -40,6 +40,8 @@ main {
     background-color: white;
     border-radius: 5% 5% 0 0;
     padding: 1.5rem 2rem;
+    /* width: 100%; */
+    /* font-family: Space Mono, Arial, Helvetica, sans-serif; */
 }
 
 /* form {
@@ -59,9 +61,11 @@ input {
     background-color: var(--Very-light-grayish-cyan);
     border: none;
     /* outline: none; */
-    color: var(--Dark-grayish-cyan);
+    color: var(--Very-dark-cyan);
     background-repeat: no-repeat;
     background-position: 7% 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /*input:hover {
@@ -89,10 +93,13 @@ input:focus {
 
 .buttons {
     display: grid;
-    grid-template-columns: 50% 50%;
+    /* grid-template-columns: repeat(auto-fit, minmax(50%, 50%)); */
+    grid-template-columns: 1fr 1fr;
     padding: 0.8rem 0;
     gap: 1rem;
-    max-width: 78vw;
+    /* max-width: 94.5%; */
+    /* justify-self: stretch; */
+    /* font-family: Space Mono, Arial, Helvetica, sans-serif; */
 }
 
 button {
@@ -102,6 +109,7 @@ button {
     height: 3rem;
     border-radius: 5px;
     font-size: 1.5rem;
+    font-family: Space Mono, Arial, Helvetica, sans-serif;
 }
 
 .custom {
