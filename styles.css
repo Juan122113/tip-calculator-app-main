@@ -81,6 +81,18 @@ input:focus {
     outline: none;
 }
 
+/* Elimina las flechas en Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Elimina las flechas en Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .bill {
     background-image: url(images/icon-dollar.svg);
     margin-bottom: 1.5rem;
