@@ -18,23 +18,24 @@
 
   <main>
 
-    <div class="inputs">
       <form id="form">
-        <label>Bill</label>
-        <input id="bill" class="bill" type="number">
+        <div class="inputs">
+          <label>Bill</label>
+          <input id="bill" class="bill" type="number">
         
-        <label>Select Tip %</label>
-        <div class="buttons">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
-          <input class="custom" placeholder="Custom">
+          <label>Select Tip %</label>
+          <div class="buttons">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input class="custom" placeholder="Custom">
+          </div>
+        
+          <label>Number of People</label>
+          <input class="Number_of_People" id="Number_of_People">
         </div>
-        
-        <label>Number of People</label>
-        <input class="Number_of_People" id="Number_of_People">
 
         <div class="results">
           <div class="tip_amount">
@@ -42,7 +43,7 @@
               <p class="Subtitle_results">Tip Amount</p>
               <p class="p_results">/ person</p>
             </div>
-            <p class="total amount"></p>
+            <p class="total amount">0.00</p>
           </div>
           <div class="total">
             <div class="amount_text">
@@ -50,7 +51,7 @@
               <p class="p_results">/ person</p>
             </div>
           </div>
-          <p class="total amount"></p>
+          <p class="total amount">0.00</p>
           <button>Reset</button>
         </div>
       </form>

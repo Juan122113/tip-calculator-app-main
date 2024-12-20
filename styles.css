@@ -39,7 +39,7 @@ body {
 main {
     background-color: white;
     border-radius: 5% 5% 0 0;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     /* width: 100%; */
     /* font-family: Space Mono, Arial, Helvetica, sans-serif; */
 }
@@ -48,10 +48,15 @@ main {
     /* display: block; */
 /*} */
 
+.inputs {
+    padding: 0 0.5rem;
+}
+
 label {
     color: var(--Dark-grayish-cyan);
     font-size: 1rem;
     /* font-weight: 400; */
+    /* margin-bottom: 100rem */
 }
 
 input {
@@ -66,6 +71,9 @@ input {
     background-position: 7% 50%;
     font-size: 1.5rem;
     font-weight: 700;
+    text-align: right;
+    font-family: Space Mono, Arial, Helvetica, sans-serif;
+    padding: 1rem;
 }
 
 /*input:hover {
@@ -107,7 +115,7 @@ input[type=number] {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(50%, 50%)); */
     grid-template-columns: 1fr 1fr;
-    padding: 0.8rem 0;
+    padding: 0.8rem 0 1.5rem 0;
     gap: 1rem;
     /* max-width: 94.5%; */
     /* justify-self: stretch; */
@@ -140,6 +148,13 @@ button {
     /* margin: 1rem; */
 
 /*} */
+
+.results {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 20px;
+    margin-top: 2.2rem;
+    width: 100%;
+}
 
 .attribution { 
     font-size: 11px; text-align: center; 
