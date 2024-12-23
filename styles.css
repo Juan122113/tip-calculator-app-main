@@ -154,13 +154,14 @@ button {
     border-radius: 20px;
     margin-top: 2.2rem;
     /* width: 100%; */
-    padding: 1.5rem;
-    padding-top: 2.5rem;
+    padding: 1.45rem;
+    /* padding-top: 2.5rem; */
 }
 
 .sum {
     display: flex;
     justify-content: space-between;
+    margin-top: 1.1rem;
 }
 
 .amount_text {
@@ -186,10 +187,13 @@ button {
     width: 100%;
     border-radius: 5px;
     color: var(--Very-dark-cyan);
+    margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 0.8rem; text-align: center; 
+    background-color: white;
 }
 
 .attribution a { 
