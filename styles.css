@@ -25,6 +25,8 @@ body {
     background-color: var(--Light-grayish-cyan);
     font-family: Space Mono, Arial, Helvetica, sans-serif;
     /* max-height: 100vh; */
+    position: relative;
+    padding-bottom: 2.5rem;
 }
 
 .logo {
@@ -193,9 +195,30 @@ button {
 
 .attribution { 
     font-size: 0.8rem; text-align: center; 
-    background-color: white;
+    /* background-color: white; */
+    position: absolute;
+    bottom: 0;
+    /* text-align: center; */
+    right: 0;
+    left: 0;
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 1024px) {
+    
+    main {
+        margin: 0 auto;
+        width: 58rem;
+    }
+
+    form {
+        display: flex;
+    }
+
+    /* .attribution {
+        background-color: var(--Light-grayish-cyan);
+    } */
 }
