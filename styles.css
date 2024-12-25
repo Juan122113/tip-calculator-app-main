@@ -216,6 +216,15 @@ button {
 
     form {
         display: flex;
+        /* justify-content: space-between; */
+    }
+
+    .inputs {
+        width: 50%;
+    }
+
+    .results {
+        width: 50%;
     }
 
     /* .attribution {
