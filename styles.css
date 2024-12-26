@@ -38,7 +38,7 @@ body {
     padding: 3.1rem 0 2.6rem 0;
 }
 
-main {
+.card {
     background-color: white;
     border-radius: 5% 5% 0 0;
     padding: 1.5rem 1.5rem;
@@ -194,24 +194,38 @@ button {
 }
 
 .attribution { 
-    font-size: 0.8rem; text-align: center; 
+    font-size: 0.8rem;
+    text-align: center; 
     /* background-color: white; */
     position: absolute;
     bottom: 0;
     /* text-align: center; */
     right: 0;
     left: 0;
+    color: var(--Very-dark-cyan);
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--Dark-grayish-cyan); 
 }
 
 @media (min-width: 1024px) {
     
     main {
-        margin: 0 auto;
+        /* margin: auto; */
         width: 58rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -59%);
+    }
+
+    .logo {
+        margin-bottom: 2.5rem;
+    }
+
+    .card {
+        /* box-shadow: 2rem; */
     }
 
     form {

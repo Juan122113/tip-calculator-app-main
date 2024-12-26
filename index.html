@@ -14,48 +14,51 @@
 </head>
 <body>
 
-  <img src="images/logo.svg" alt="logo SPLITTER" class="logo">
-
   <main>
 
-      <form id="form">
-        <div class="inputs">
-          <label>Bill</label>
-          <input id="bill" class="bill" type="number">
-        
-          <label>Select Tip %</label>
-          <div class="buttons">
-            <button>5%</button>
-            <button>10%</button>
-            <button>15%</button>
-            <button>25%</button>
-            <button>50%</button>
-            <input class="custom" placeholder="Custom">
-          </div>
-        
-          <label>Number of People</label>
-          <input class="Number_of_People" id="Number_of_People" autocomplete="off">
-        </div>
+    <img src="images/logo.svg" alt="logo SPLITTER" class="logo">
 
-        <div class="results">
-          <div class="sum">
-            <div class="amount_text">
-              <p class="Subtitle_results">Tip Amount</p>
-              <p class="p_results">/ person</p>
+    <div class="card">
+
+        <form id="form">
+          <div class="inputs">
+            <label>Bill</label>
+            <input id="bill" class="bill" type="number">
+        
+            <label>Select Tip %</label>
+            <div class="buttons">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input class="custom" placeholder="Custom">
             </div>
-            <p class="total_amount">$0.00</p>
+        
+            <label>Number of People</label>
+            <input class="Number_of_People" id="Number_of_People" autocomplete="off">
           </div>
-          <div class="sum">
-            <div class="amount_text">
-              <p class="Subtitle_results">Total</p>
-              <p class="p_results">/ person</p>
+
+          <div class="results">
+            <div class="sum">
+              <div class="amount_text">
+                <p class="Subtitle_results">Tip Amount</p>
+                <p class="p_results">/ person</p>
+              </div>
+              <p class="total_amount">$0.00</p>
             </div>
-            <p class="total_amount">$0.00</p>
+            <div class="sum">
+              <div class="amount_text">
+                <p class="Subtitle_results">Total</p>
+                <p class="p_results">/ person</p>
+              </div>
+              <p class="total_amount">$0.00</p>
+            </div>
+            <button class="reset">RESET</button>
           </div>
-          <button class="reset">RESET</button>
-        </div>
-      </form>
+        </form>
     
+    </div>
   </main>
 
   <div class="attribution">
