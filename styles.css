@@ -225,7 +225,8 @@ button {
     }
 
     .card {
-        /* box-shadow: 2rem; */
+        box-shadow: 1rem 1rem 50px -50px;
+        border-radius: 30px;
     }
 
     form {
