@@ -38,7 +38,7 @@ body {
     padding: 3.1rem 0 2.6rem 0;
 }
 
-.card {
+form {
     background-color: white;
     border-radius: 5% 5% 0 0;
     padding: 1.5rem 1.5rem;
@@ -224,19 +224,23 @@ button {
         margin-bottom: 2.5rem;
     }
 
-    .card {
+    form {
         box-shadow: 0.2rem 1rem 65px -50px;
         border-radius: 30px;
+        /* max-width: 58rem; */
+        width: 57.5rem;
+        padding: 2rem;
+        display: flex;
     }
 
-    form {
-        display: flex;
-        /* justify-content: space-between; */
-    }
+    /* form {
+        
+        justify-content: space-between;
+    } */
 
     .inputs {
-        /* width: 50%; */
-        padding: 1rem;
+        width: 50%;
+        padding: 0 2rem;
     }
 
     .buttons {
@@ -254,7 +258,16 @@ button {
     }
 
     .results {
-        /* width: 50%; */
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .sum {
+        padding: 0.8rem;
     }
 
     /* .attribution {
