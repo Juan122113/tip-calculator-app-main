@@ -19,12 +19,9 @@ html {
 
 body {
     min-height: 100vh;
-    /* width: 100%; */
-    /* max-width: 100vw; */
     font-size: 24px;
     background-color: var(--Light-grayish-cyan);
     font-family: Space Mono, Arial, Helvetica, sans-serif;
-    /* max-height: 100vh; */
     position: relative;
     padding-bottom: 2.5rem;
 }
@@ -32,9 +29,6 @@ body {
 .logo {
     margin: auto;
     display: block;
-    /* text-align: center; */
-    /* margin-left: 50%; */
-    /* margin-right: 50%; */
     padding: 3.1rem 0 2.6rem 0;
 }
 
@@ -42,13 +36,7 @@ form {
     background-color: white;
     border-radius: 5% 5% 0 0;
     padding: 1.5rem 1.5rem;
-    /* width: 100%; */
-    /* font-family: Space Mono, Arial, Helvetica, sans-serif; */
 }
-
-/* form {
-    /* display: block; */
-/*} */
 
 .inputs {
     padding: 0 0.5rem;
@@ -57,8 +45,6 @@ form {
 label {
     color: var(--Dark-grayish-cyan);
     font-size: 1rem;
-    /* font-weight: 400; */
-    /* margin-bottom: 100rem */
 }
 
 input {
@@ -67,7 +53,6 @@ input {
     height: 3rem;
     background-color: var(--Very-light-grayish-cyan);
     border: none;
-    /* outline: none; */
     color: var(--Very-dark-cyan);
     background-repeat: no-repeat;
     background-position: 7% 50%;
@@ -77,13 +62,6 @@ input {
     font-family: Space Mono, Arial, Helvetica, sans-serif;
     padding: 1rem;
 }
-
-/*input:hover {
-    /* cursor: pointer; */
-    /* border: solid var(--Strong-cyan);
-    outline: none; */
-    /* border-color: aqua; */
-/*}*/
 
 input:focus {
     text-align: right;
@@ -107,21 +85,11 @@ input[type=number] {
     background-image: url(images/icon-dollar.svg);
     margin-bottom: 1.5rem;
 }
-
-/* .bill:focus {
-    border-color: var(--Strong-cyan);
-    
-} */
-
 .buttons {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(50%, 50%)); */
     grid-template-columns: 1fr 1fr;
     padding: 0.8rem 0 1.5rem 0;
     gap: 1rem;
-    /* max-width: 94.5%; */
-    /* justify-self: stretch; */
-    /* font-family: Space Mono, Arial, Helvetica, sans-serif; */
 }
 
 button {
@@ -146,18 +114,11 @@ button {
     background-image: url(images/icon-person.svg);
 }
 
-/* .Number_of_People:hover {
-    /* margin: 1rem; */
-
-/*} */
-
 .results {
     background-color: var(--Very-dark-cyan);
     border-radius: 20px;
     margin-top: 2.2rem;
-    /* width: 100%; */
     padding: 1.45rem;
-    /* padding-top: 2.5rem; */
 }
 
 .sum {
@@ -173,14 +134,12 @@ button {
 
 .p_results {
     font-size: 0.8rem;
-    /* color: white; */
     opacity: 0.4;
 }
 
 .total_amount {
     color: var(--Strong-cyan);
     font-size: 2rem;
-    /* text-align: right; */
 
 }
 
@@ -196,10 +155,8 @@ button {
 .attribution { 
     font-size: 0.8rem;
     text-align: center; 
-    /* background-color: white; */
     position: absolute;
     bottom: 0;
-    /* text-align: center; */
     right: 0;
     left: 0;
     color: var(--Very-dark-cyan);
@@ -212,8 +169,6 @@ button {
 @media (min-width: 1024px) {
     
     main {
-        /* margin: auto; */
-        /* width: 58rem; */
         position: absolute;
         top: 50%;
         left: 50%;
@@ -228,18 +183,12 @@ button {
     form {
         box-shadow: 0.2rem 1rem 65px -50px;
         border-radius: 30px;
-        /* max-width: 58rem; */
         width: 57.5rem;
         padding: 2rem 2rem;
         display: flex;
         position: relative;
         top: 2rem;
     }
-
-    /* form {
-        
-        justify-content: space-between;
-    } */
 
     .inputs {
         width: 50%;
@@ -248,15 +197,12 @@ button {
     }
 
     .bill {
-        /* padding-bottom: 4rem; */
         margin-bottom: 2.2rem;
     }
 
     .buttons {
-        /* display: grid; */
         grid-template-columns: 1fr  1fr  1fr;
         gap: 0.8rem;
-        /* padding: 0; */
         margin-bottom: 1rem;
     }
 
@@ -265,6 +211,8 @@ button {
     }
     .custom {
         width: 7rem;
+        text-align: center;
+        padding: 0;
     }
 
     .Number_of_People {
@@ -292,7 +240,4 @@ button {
         bottom: 1rem;
     }
 
-    /* .attribution {
-        background-color: var(--Light-grayish-cyan);
-    } */
 }
