@@ -221,7 +221,8 @@ button {
     }
 
     .logo {
-        margin-bottom: 2.5rem;
+        margin-bottom: 3rem;
+        padding: 0;
     }
 
     form {
@@ -231,6 +232,8 @@ button {
         width: 57.5rem;
         padding: 2rem 2rem;
         display: flex;
+        position: relative;
+        top: 2rem;
     }
 
     /* form {
@@ -240,7 +243,7 @@ button {
 
     .inputs {
         width: 50%;
-        padding: 0.5rem 1rem;
+        padding: 0rem 1rem;
         margin-right: 1.7rem;
     }
 
@@ -275,10 +278,12 @@ button {
         justify-content: space-between;
         margin: 0;
         padding: 2rem;
+        padding-bottom: 2.6rem;
     }
 
     .sum {
-        padding: 0.8rem;
+        padding: 0.7rem;
+        padding-bottom: 0;
     }
 
     .total_amount {
