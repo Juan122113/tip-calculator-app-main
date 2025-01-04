@@ -61,6 +61,12 @@ input {
     text-align: right;
     font-family: Space Mono, Arial, Helvetica, sans-serif;
     padding: 1rem;
+    cursor: pointer;
+}
+
+input:hover {
+    border: solid var(--Strong-cyan);
+    outline: none;
 }
 
 input:focus {
@@ -108,6 +114,16 @@ button {
     text-align: right;
     padding-right: 0.8rem;
     letter-spacing: 0.03rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+}
+
+#zero {
+    font-size: 1rem;
+    color: orange;
 }
 
 .Number_of_People {
