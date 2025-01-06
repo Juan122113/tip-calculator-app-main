@@ -110,7 +110,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--Light-grayish-cyan);
+    background-color: #9FE8DF;
     color: var(--Very-dark-cyan);
 }
 
@@ -129,7 +129,7 @@ button:hover {
 
 #zero {
     font-size: 1rem;
-    color: orange;
+    color: #D97E6A;
 }
 
 .Number_of_People {
