@@ -212,10 +212,19 @@ button:hover {
         top: 2rem;
     }
 
+    label {
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        background-position: 5% 50%;
+    }
+
     .inputs {
         width: 50%;
         padding: 0rem 1rem;
         margin-right: 1.7rem;
+        /* background-position: 20% 50%; */
     }
 
     .bill {
@@ -225,7 +234,7 @@ button:hover {
     .buttons {
         grid-template-columns: 1fr  1fr  1fr;
         gap: 0.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     button {
@@ -238,7 +247,7 @@ button:hover {
     }
 
     .Number_of_People {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0rem;
     }
 
     .results {
@@ -247,13 +256,21 @@ button:hover {
         flex-direction: column;
         justify-content: space-between;
         margin: 0;
-        padding: 2rem;
+        padding: 2.5rem;
         padding-bottom: 2.6rem;
     }
 
+    .results_text {
+        padding-bottom: 4.5rem;
+    }
+
     .sum {
-        padding: 0.7rem;
+        /* padding: 0.3rem; */
         padding-bottom: 0;
+    }
+
+    .sum--first {
+        padding-bottom: 0.5rem;
     }
 
     .total_amount {
