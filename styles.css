@@ -228,13 +228,13 @@ button:hover {
     }
 
     .bill {
-        margin-bottom: 2.2rem;
+        margin-bottom: 1.5rem;
     }
 
     .buttons {
         grid-template-columns: 1fr  1fr  1fr;
         gap: 0.8rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0rem;
     }
 
     button {
@@ -246,8 +246,12 @@ button:hover {
         padding: 0;
     }
 
+    .group {
+        margin-top: 1.5rem;
+    }
+
     .Number_of_People {
-        margin-bottom: 0rem;
+        /* margin-top: 1rem; */
     }
 
     .results {
