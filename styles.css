@@ -23,8 +23,12 @@ body {
     background-color: var(--Light-grayish-cyan);
     font-family: Space Mono, Arial, Helvetica, sans-serif;
     position: relative;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
 }
+
+/* main {
+    height: 100%;
+} */
 
 .logo {
     margin: auto;
@@ -36,6 +40,7 @@ form {
     background-color: white;
     border-radius: 5% 5% 0 0;
     padding: 1.5rem 1.5rem;
+    height: 100%;
 }
 
 .inputs {
@@ -125,11 +130,13 @@ button:hover {
 .group {
     display: flex;
     justify-content: space-between;
+    margin-top: 0.5rem;
 }
 
 #zero {
     font-size: 1rem;
     color: #D97E6A;
+    display: none;
 }
 
 .Number_of_People {
@@ -139,7 +146,7 @@ button:hover {
 .results {
     background-color: var(--Very-dark-cyan);
     border-radius: 20px;
-    margin-top: 2.2rem;
+    margin-top: 2.4rem;
     padding: 1.45rem;
 }
 
@@ -182,6 +189,7 @@ button:hover {
     right: 0;
     left: 0;
     color: var(--Very-dark-cyan);
+    background-color: white;
 }
 
 .attribution a { 
@@ -222,13 +230,13 @@ button:hover {
 
     .inputs {
         width: 50%;
-        padding: 0rem 1rem;
+        padding: 0.5rem 1rem;
         margin-right: 1.7rem;
         /* background-position: 20% 50%; */
     }
 
     .bill {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .buttons {
@@ -247,12 +255,12 @@ button:hover {
     }
 
     .group {
-        margin-top: 1.5rem;
+        margin-top: 1.2rem;
     }
 
-    .Number_of_People {
-        /* margin-top: 1rem; */
-    }
+    /* .Number_of_People {
+        margin-top: 1rem;
+    } */
 
     .results {
         width: 50%;
