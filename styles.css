@@ -291,4 +291,9 @@ button:hover {
         bottom: 1rem;
     }
 
+    .attribution {
+        background-color: var(--Light-grayish-cyan);
+        font-size: 1rem;
+    }
+
 }
