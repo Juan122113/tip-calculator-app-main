@@ -23,7 +23,7 @@ body {
     background-color: var(--Light-grayish-cyan);
     font-family: Space Mono, Arial, Helvetica, sans-serif;
     position: relative;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 /* main {
@@ -189,7 +189,7 @@ button:hover {
     right: 0;
     left: 0;
     color: var(--Very-dark-cyan);
-    background-color: white;
+    /* background-color: white; */
 }
 
 .attribution a { 
@@ -292,7 +292,7 @@ button:hover {
     }
 
     .attribution {
-        background-color: var(--Light-grayish-cyan);
+        /* background-color: var(--Light-grayish-cyan); */
         font-size: 1rem;
     }
 
