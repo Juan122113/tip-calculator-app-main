@@ -14,6 +14,7 @@ const numberOfPeople = document.getElementById("number_of_People");
 const tipAmount = document.getElementById("tip_amount");
 const total = document.getElementById("total");
 const resetBtn = document.getElementById("reset");
+let i = 0;
 
 const btnsPercentages = [percent5, percent10, percent15, percent25, percent50];
 
@@ -25,13 +26,20 @@ percent50.value = 50;
 
 // console.log(percent5.value);
 
-function a1(btn, customInput, bill){
-  if (customInput.value == "") {
+function handleButtonClick(activeBtn, customInput, bill){
+  return function(e) {
+  
+  // console.log(i);
+  console.log(activeBtn.value);
+  // console.log(activeBtn[i]);
+    if (customInput.value == "") {
     // console.log("empty");
     // console.log(button.value);
     // console.log(customInput.value);
-    let total = (btn.value * bill.value) / 100;
-    console.log(total);
+      console.log(activeBtn.value);
+      let total = (activeBtn.value * bill.  value) / 100;
+      console.log(total);
+    }
   }
 }
 
@@ -39,15 +47,23 @@ function a1(btn, customInput, bill){
 //     btnsPercentages.addEventListener('click', a1(btns, customInput, bill));
 // }
 
-function a2(btnsPercentages,customInput, bill){
-  btnsPercentages.forEach(btn => {
-    btn.addEventListener('click', a1(btn, customInput, bill));
-  });
+// function a2(btnsPercentages,customInput, bill){
+//   btnsPercentages.forEach(btn => {
+//     btn.addEventListener('click', a1(btn, customInput, bill));
+//   });
+// }
+
+for (i; i < btnsPercentages.length; i++) {
+  btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill));
+  console.log(btnsPercentages[i]);
 }
+
+console.log(btnsPercentages[i]);
 
 function handleSubmit(e) {
     e.preventDefault() // prevent the default behaviour
-    a2(btnsPercentages,customInput, bill)
+    // a2(btnsPercentages,customInput, bill)
+    handleButtonClick(btnsPercentages, customInput, bill);
   }
 
 form.addEventListener('submit', handleSubmit);
