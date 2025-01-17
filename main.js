@@ -17,6 +17,7 @@ const resetBtn = document.getElementById("reset");
 let i = 0;
 
 const btnsPercentages = [percent5, percent10, percent15, percent25, percent50];
+let tipPercentage = 0;
 
 percent5.value = 5;
 percent10.value = 10;
@@ -25,8 +26,13 @@ percent25.value = 25;
 percent50.value = 50;
 
 // console.log(percent5.value);
+function calculatingTipPercentage(activeBtn, bill, tipPercentage){
+  console.log(activeBtn.value);
+  tipPercentage = (activeBtn.value * bill.value) / 100;
+  console.log(tipPercentage);
+}
 
-function handleButtonClick(activeBtn, customInput, bill){
+function handleButtonClick(activeBtn, customInput, bill, tipPercentage){
   return function(e) {
   
   // console.log(i);
@@ -36,9 +42,13 @@ function handleButtonClick(activeBtn, customInput, bill){
     // console.log("empty");
     // console.log(button.value);
     // console.log(customInput.value);
-      console.log(activeBtn.value);
-      let total = (activeBtn.value * bill.  value) / 100;
-      console.log(total);
+
+    calculatingTipPercentage(activeBtn, bill, tipPercentage);
+      
+    }
+    else {
+      tipPercentage = (customInput.value * bill.value) / 100;
+      console.log(tipPercentage);
     }
   }
 }
@@ -54,8 +64,10 @@ function handleButtonClick(activeBtn, customInput, bill){
 // }
 
 for (i; i < btnsPercentages.length; i++) {
-  btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill));
-  console.log(btnsPercentages[i]);
+  // if (customInput.value == "") {
+    btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill, tipPercentage));
+    console.log(btnsPercentages[i]);
+  // }
 }
 
 console.log(btnsPercentages[i]);
@@ -63,7 +75,9 @@ console.log(btnsPercentages[i]);
 function handleSubmit(e) {
     e.preventDefault() // prevent the default behaviour
     // a2(btnsPercentages,customInput, bill)
-    handleButtonClick(btnsPercentages, customInput, bill);
+    if (customInput.value !== Number) {
+      handleButtonClick(btnsPercentages, customInput, bill);
+    }
   }
 
 form.addEventListener('submit', handleSubmit);
