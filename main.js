@@ -17,7 +17,9 @@ const resetBtn = document.getElementById("reset");
 let i = 0;
 
 const btnsPercentages = [percent5, percent10, percent15, percent25, percent50];
+
 let tipPercentage = 0;
+let tipAmountPerson = 0;
 
 percent5.value = 5;
 percent10.value = 10;
@@ -25,11 +27,24 @@ percent15.value = 15;
 percent25.value = 25;
 percent50.value = 50;
 
+
+function dividingTipPercentage(tipPercentage, numberOfPeople) {
+  tipAmountPerson = tipPercentage / numberOfPeople.value;
+  console.log(tipAmountPerson);
+}
+
+function inputCalculatingTipPercentage(customInput, bill, tipPercentage) {
+  tipPercentage = (customInput.value * bill.value) / 100;
+  console.log(tipPercentage);
+  dividingTipPercentage(tipPercentage, numberOfPeople);
+}
+
 // console.log(percent5.value);
-function calculatingTipPercentage(activeBtn, bill, tipPercentage){
+function btnCalculatingTipPercentage(activeBtn, bill, tipPercentage){
   console.log(activeBtn.value);
   tipPercentage = (activeBtn.value * bill.value) / 100;
   console.log(tipPercentage);
+  dividingTipPercentage(tipPercentage, numberOfPeople);
 }
 
 function handleButtonClick(activeBtn, customInput, bill, tipPercentage){
@@ -43,12 +58,12 @@ function handleButtonClick(activeBtn, customInput, bill, tipPercentage){
     // console.log(button.value);
     // console.log(customInput.value);
 
-    calculatingTipPercentage(activeBtn, bill, tipPercentage);
+    btnCalculatingTipPercentage(activeBtn, bill, tipPercentage);
       
     }
     else {
-      tipPercentage = (customInput.value * bill.value) / 100;
-      console.log(tipPercentage);
+      inputCalculatingTipPercentage(customInput, bill, tipPercentage)
+      
     }
   }
 }
@@ -65,8 +80,10 @@ function handleButtonClick(activeBtn, customInput, bill, tipPercentage){
 
 for (i; i < btnsPercentages.length; i++) {
   // if (customInput.value == "") {
+    if (customInput.value === "") {
     btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill, tipPercentage));
     console.log(btnsPercentages[i]);
+    }
   // }
 }
 
@@ -75,7 +92,7 @@ console.log(btnsPercentages[i]);
 function handleSubmit(e) {
     e.preventDefault() // prevent the default behaviour
     // a2(btnsPercentages,customInput, bill)
-    if (customInput.value !== Number) {
+    if (customInput.value === "") {
       handleButtonClick(btnsPercentages, customInput, bill);
     }
   }
