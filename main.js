@@ -14,6 +14,8 @@ const numberOfPeople = document.getElementById("number_of_People");
 const tipAmount = document.getElementById("tip_amount");
 const total = document.getElementById("total");
 const resetBtn = document.getElementById("reset");
+const cantBeZero = document.getElementById("zero");
+
 let i = 0;
 
 const btnsPercentages = [percent5, percent10, percent15, percent25, percent50];
@@ -27,10 +29,24 @@ percent15.value = 15;
 percent25.value = 25;
 percent50.value = 50;
 
+function catnBeZeroOnScreen() {
+  if (numberOfPeople.value == 0 || numberOfPeople.value == "") {
+    cantBeZero.style.display = "block";
+  } else {
+    cantBeZero.style.display = "none";
+  }
+}
+
+
+function puttingTipAmountOnScreen() {
+
+}
 
 function dividingTipPercentage(tipPercentage, numberOfPeople) {
   tipAmountPerson = tipPercentage / numberOfPeople.value;
   console.log(tipAmountPerson);
+  catnBeZeroOnScreen(numberOfPeople, cantBeZero);
+  puttingTipAmountOnScreen();
 }
 
 function inputCalculatingTipPercentage(customInput, bill, tipPercentage) {
