@@ -21,12 +21,28 @@ const btnsPercentages = [percent5, percent10, percent15, percent25, percent50];
 let i = 0;
 let tipPercentage = 0;
 let tipAmountPerson = 0;
+let totalPerPerson = 0;
+let billValueFloat = parseFloat(bill.value);
+
+console.log(typeof billValueFloat);
 
 percent5.value = 5;
 percent10.value = 10;
 percent15.value = 15;
 percent25.value = 25;
 percent50.value = 50;
+
+
+function calculatingTotalPerson(tipPercentage, numberOfPeople, bill, totalPerPerson) {
+  totalPerPerson = (billValueFloat + tipPercentage) / numberOfPeople.value;
+  console.log(totalPerPerson);
+  console.log(typeof bill);
+  console.log(typeof tipPercentage);
+}
+
+function changingTypeOfBillValue() {
+
+}
 
 function catnBeZeroOnScreen() {
   if (numberOfPeople.value == 0 || numberOfPeople.value == "") {
@@ -41,12 +57,18 @@ function puttingTipAmountOnScreen(tipAmountPerson, tipAmount) {
   tipAmount.innerHTML = `<p>$${tipAmountPerson}</p>`;
 }
 
+function tipAmountToFixed(tipAmountPerson, tipAmount) {
+  let tipAmountFloat = tipAmountPerson.toFixed(2);
+  puttingTipAmountOnScreen(tipAmountFloat, tipAmount);
+  calculatingTotalPerson(tipPercentage, numberOfPeople, bill, totalPerPerson)
+}
+
 function dividingTipPercentage(tipPercentage, numberOfPeople) {
   tipAmountPerson = tipPercentage / numberOfPeople.value;
   console.log(tipAmountPerson);
   // console.log(numberOfPeople.value);
   catnBeZeroOnScreen(numberOfPeople, cantBeZero);
-  puttingTipAmountOnScreen(tipAmountPerson, tipAmount);
+  tipAmountToFixed(tipAmountPerson, tipAmount);
 }
 
 function inputCalculatingTipPercentage(customInput, bill, tipPercentage) {
