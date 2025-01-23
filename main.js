@@ -25,6 +25,7 @@ let totalPerPerson = 0;
 let billValueFloat = parseFloat(bill.value);
 
 console.log(typeof billValueFloat);
+console.log(typeof bill.value);
 
 percent5.value = 5;
 percent10.value = 10;
@@ -37,13 +38,22 @@ function puttingTotalPersonOnScreen(totalPerPerson, total) {
   total.innerHTML = `<p>$${totalPerPerson}</p>`;
 }
 
-function calculatingTotalPerson(tipAmountPerson, numberOfPeople, bill, totalPerPerson, billValueFloat) {
-  totalPerPerson = (billValueFloat + tipAmountPerson) / numberOfPeople.value;
+function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat) {
+  totalPerPerson = (billValueFloat + tipAmountFloat) / numberOfPeople.value;
   console.log(totalPerPerson);
   console.log(typeof bill);
   console.log(typeof tipPercentage);
   console.log(tipPercentage);
-  puttingTipAmountOnScreen(totalPerPerson,total);
+  console.log(typeof billValueFloat);
+  console.log(typeof tipAmountFloat);
+  console.log(billValueFloat);
+  console.log(tipAmountFloat);
+  puttingTotalPersonOnScreen(totalPerPerson,total);
+}
+
+function changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat) {
+  let tipAmountFloatNum = parseFloat(tipAmountFloat);
+  calculatingTotalPerson(tipAmountFloatNum, numberOfPeople, bill, totalPerPerson, billValueFloat)
 }
 
 // function changingTypeOfBillValue(tipPercentage, numberOfPeople, bill, totalPerPerson) {
@@ -68,7 +78,7 @@ function tipAmountToFixed(tipAmountPerson, tipAmount) {
   let tipAmountFloat = tipAmountPerson.toFixed(2);
   puttingTipAmountOnScreen(tipAmountFloat, tipAmount);
   // changingTypeOfBillValue(tipPercentage, numberOfPeople, bill, totalPerPerson);
-  calculatingTotalPerson(tipAmountPerson, numberOfPeople, bill, totalPerPerson, billValueFloat)
+  changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat);
 }
 
 function dividingTipPercentage(tipPercentage, numberOfPeople) {
@@ -130,10 +140,12 @@ for (i; i < btnsPercentages.length; i++) {
     btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill, tipPercentage));
     console.log(btnsPercentages[i]);
     }
+
+    // console.log(btnsPercentages[i]);
   // }
 }
 
-console.log(btnsPercentages[i]);
+
 
 function handleSubmit(e) {
     e.preventDefault() // prevent the default behaviour
