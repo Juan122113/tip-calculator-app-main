@@ -26,6 +26,7 @@ let billValueFloat = parseFloat(bill.value);
 
 console.log(typeof billValueFloat);
 console.log(typeof bill.value);
+console.log(resetBtn);
 
 percent5.value = 5;
 percent10.value = 10;
@@ -34,8 +35,24 @@ percent25.value = 25;
 percent50.value = 50;
 
 
+function handleResetBtnClick(bill, customInput, numberOfPeople, totalPerPerson) {
+  return function(e) {
+  bill.value = "";
+  customInput.value = "";
+  numberOfPeople.value = "";
+  totalPerPerson = 0;
+}
+}
+
+function resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople, totalPerPerson) {
+  resetBtn.addEventListener("click", handleResetBtnClick(bill, customInput, numberOfPeople, totalPerPerson));
+}
+
+
+
 function puttingTotalPersonOnScreen(totalPerPerson, total) {
   total.innerHTML = `<p>$${totalPerPerson}</p>`;
+  resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople, totalPerPerson);
 }
 
 function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat) {
@@ -49,6 +66,7 @@ function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPe
   console.log(billValueFloat);
   console.log(tipAmountFloat);
   puttingTotalPersonOnScreen(totalPerPerson,total);
+  
 }
 
 function changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat) {
@@ -87,6 +105,7 @@ function dividingTipPercentage(tipPercentage, numberOfPeople) {
   // console.log(numberOfPeople.value);
   catnBeZeroOnScreen(numberOfPeople, cantBeZero);
   tipAmountToFixed(tipAmountPerson, tipAmount);
+  
 }
 
 function inputCalculatingTipPercentage(customInput, bill, tipPercentage) {
@@ -140,6 +159,7 @@ for (i; i < btnsPercentages.length; i++) {
     btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill, tipPercentage));
     console.log(btnsPercentages[i]);
     }
+    
 
     // console.log(btnsPercentages[i]);
   // }
@@ -156,6 +176,7 @@ function handleSubmit(e) {
   }
 
 form.addEventListener('submit', handleSubmit);
+
 
 console.log(bill.value);
 console.log(customInput.value);
