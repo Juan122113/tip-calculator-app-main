@@ -22,7 +22,7 @@ let i = 0;
 let tipPercentage = 0;
 let tipAmountPerson = 0;
 let totalPerPerson = 0;
-let billValueFloat = parseFloat(bill.value);
+const billValueFloat = parseFloat(bill.value);
 
 console.log(typeof billValueFloat);
 console.log(typeof bill.value);
