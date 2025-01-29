@@ -57,7 +57,7 @@ function puttingTotalPersonOnScreen(totalPerPerson, total) {
   resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople, totalPerPerson);
 }
 
-function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat) {
+function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat, tipPercentage) {
   totalPerPerson = (billValueFloat + tipPercentage) / numberOfPeople.value;
   console.log(totalPerPerson);
   console.log(typeof bill);
@@ -71,10 +71,10 @@ function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPe
   
 }
 
-function changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat) {
+function changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat, tipPercentage) {
   let tipAmountFloatNum = parseFloat(tipAmountFloat);
   console.log(tipAmountFloatNum)
-  calculatingTotalPerson(tipAmountFloatNum, numberOfPeople, bill, totalPerPerson, billValueFloat)
+  calculatingTotalPerson(tipAmountFloatNum, numberOfPeople, bill, totalPerPerson, billValueFloat, tipPercentage)
 }
 
 // function changingTypeOfBillValue(tipPercentage, numberOfPeople, bill, totalPerPerson) {
@@ -95,26 +95,26 @@ function puttingTipAmountOnScreen(tipAmountPerson, tipAmount) {
   tipAmount.innerHTML = `<p>$${tipAmountPerson}</p>`;
 }
 
-function tipAmountToFixed(tipAmountPerson, tipAmount, billValueFloat) {
+function tipAmountToFixed(tipAmountPerson, tipAmount, billValueFloat, tipPercentage) {
   let tipAmountFloat = tipAmountPerson.toFixed(2);
   puttingTipAmountOnScreen(tipAmountFloat, tipAmount);
   // changingTypeOfBillValue(tipPercentage, numberOfPeople, bill, totalPerPerson);
-  changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat);
+  changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueFloat, tipPercentage);
 }
 
-function dividingTipPercentage(tipPercentage, numberOfPeople) {
+function dividingTipPercentage(tipPercentage, numberOfPeople, tipPercentage) {
   tipAmountPerson = tipPercentage / numberOfPeople.value;
   console.log(tipAmountPerson);
   // console.log(numberOfPeople.value);
   catnBeZeroOnScreen(numberOfPeople, cantBeZero);
-  tipAmountToFixed(tipAmountPerson, tipAmount,billValueFloat);
+  tipAmountToFixed(tipAmountPerson, tipAmount,billValueFloat, tipPercentage);
   
 }
 
 function inputCalculatingTipPercentage(customInput, bill, tipPercentage, numberOfPeople) {
   tipPercentage = (customInput.value * bill.value) / 100;
   console.log(tipPercentage);
-  dividingTipPercentage(tipPercentage, numberOfPeople);
+  dividingTipPercentage(tipPercentage, numberOfPeople, tipPercentage);
 }
 
 // console.log(percent5.value);
