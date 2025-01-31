@@ -36,7 +36,7 @@ percent25.value = 25;
 percent50.value = 50;
 
 
-function handleResetBtnClick(bill, customInput, numberOfPeople, totalPerPerson) {
+function handleResetBtnClick(bill, customInput, numberOfPeople) {
   return function(e) {
   bill.value = "";
   customInput.value = "";
@@ -67,6 +67,7 @@ function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPe
   console.log(typeof tipAmountFloat);
   // console.log(billValueFloat);
   console.log(tipAmountFloat);
+  console.log(billValueNum);
   puttingTotalPersonOnScreen(totalPerPerson,total);
 }
 
@@ -100,13 +101,13 @@ function tipAmountToFixed(tipAmountPerson, tipAmount, tipPercentage) {
   changingTypeOfBillValue(tipAmountFloat, tipPercentage, numberOfPeople, bill, totalPerPerson);
 }
 
-function dividingTipPercentage(tipPercentage, numberOfPeople, tipPercentage) {
+function dividingTipPercentage(tipPercentage, numberOfPeople) {
   tipAmountPerson = tipPercentage / numberOfPeople.value;
   console.log(tipAmountPerson);
+  console.log(tipPercentage);
   // console.log(numberOfPeople.value);
   catnBeZeroOnScreen(numberOfPeople, cantBeZero);
   tipAmountToFixed(tipAmountPerson, tipAmount, tipPercentage);
-  
 }
 
 function inputCalculatingTipPercentage(customInput, bill, tipPercentage, numberOfPeople) {
