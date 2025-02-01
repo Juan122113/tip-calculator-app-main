@@ -45,16 +45,22 @@ function handleResetBtnClick(bill, customInput, numberOfPeople) {
 }
 }
 
-function resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople, totalPerPerson) {
-  resetBtn.addEventListener("click", handleResetBtnClick(bill, customInput, numberOfPeople, totalPerPerson));
+function resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople) {
+  resetBtn.addEventListener("click", handleResetBtnClick(bill, customInput, numberOfPeople));
 }
 
 
 
-function puttingTotalPersonOnScreen(totalPerPerson, total) {
-  total.innerHTML = `<p>$${totalPerPerson}</p>`;
+function puttingTotalPersonOnScreen(totalPerPersonDecimal, total) {
+  total.innerHTML = `<p>$${totalPerPersonDecimal}</p>`;
   console.log(totalPerPerson);
-  resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople, totalPerPerson);
+  resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople);
+}
+
+function totalPerPersonToFixed(totalPerPerson,total) {
+  const totalPerPersonDecimal = totalPerPerson.toFixed(2);
+  console.log(totalPerPersonDecimal);
+  puttingTotalPersonOnScreen(totalPerPersonDecimal, total);
 }
 
 function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueNum, tipPercentage) {
@@ -68,7 +74,8 @@ function calculatingTotalPerson(tipAmountFloat, numberOfPeople, bill, totalPerPe
   // console.log(billValueFloat);
   console.log(tipAmountFloat);
   console.log(billValueNum);
-  puttingTotalPersonOnScreen(totalPerPerson,total);
+  totalPerPersonToFixed(totalPerPerson, total);
+  // puttingTotalPersonOnScreen(totalPerPerson, total);
 }
 
 function changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueNum, tipPercentage) {
