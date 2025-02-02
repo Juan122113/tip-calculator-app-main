@@ -1,7 +1,3 @@
-// const body = document.getElementById("body");
-
-// console.log(body);
-
 const form = document.getElementById("form");
 const bill = document.getElementById("bill");
 const percent5 = document.getElementById("5-percent");
@@ -22,12 +18,6 @@ let i = 0;
 let tipPercentage = 0;
 let tipAmountPerson = 0;
 let totalPerPerson = 0;
-// const billValueFloat = parseFloat(bill.value);
-console.log(typeof bill.value);
-console.log(typeof billValueFloat);
-console.log(typeof bill.value);
-console.log(resetBtn);
-// console.log(billValueFloat);
 
 percent5.value = 5;
 percent10.value = 10;
@@ -38,22 +28,20 @@ percent50.value = 50;
 
 function handleResetBtnClick(bill, customInput, numberOfPeople) {
   return function(e) {
-  bill.value = "";
-  customInput.value = "";
-  numberOfPeople.value = "";
-  // totalPerPerson = 0;
-}
+    bill.value = "";
+    customInput.value = "";
+    numberOfPeople.value = "";
+    total.innerHTML = `<p>$${"0.00"}</p>`;
+    tipAmount.innerHTML = `<p>$${"0.00"}</p>`;
+  }
 }
 
 function resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople) {
   resetBtn.addEventListener("click", handleResetBtnClick(bill, customInput, numberOfPeople));
 }
 
-
-
 function puttingTotalPersonOnScreen(totalPerPersonDecimal, total) {
   total.innerHTML = `<p>$${totalPerPersonDecimal}</p>`;
-  console.log(totalPerPerson);
   resetBtnFunctionality(resetBtn, bill, customInput, numberOfPeople);
 }
 
