@@ -131,12 +131,12 @@ function handleButtonClick(activeBtn, customInput, bill, tipPercentage, numberOf
     // console.log(button.value);
     // console.log(customInput.value);
 
-    btnCalculatingTipPercentage(activeBtn, bill, tipPercentage, numberOfPeople);
+      btnCalculatingTipPercentage(activeBtn, bill, tipPercentage, numberOfPeople);
       
     }
     else {
       inputCalculatingTipPercentage(customInput, bill, tipPercentage, numberOfPeople)
-      
+      // btnsPercentages.disabled = true;
     }
   }
 }
@@ -156,6 +156,8 @@ for (i; i < btnsPercentages.length; i++) {
     if (customInput.value === "") {
     btnsPercentages[i].addEventListener('click', handleButtonClick(btnsPercentages[i], customInput, bill, tipPercentage, numberOfPeople));
     console.log(btnsPercentages[i]);
+    } else {
+      btnsPercentages[i].disabled = true;
     }
     
 
