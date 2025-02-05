@@ -65,11 +65,27 @@ function changingTypeOfBillValue(tipAmountFloat, tipPercentage, numberOfPeople, 
   changingTypeOfTipAmountFloat(tipAmountFloat, numberOfPeople, bill, totalPerPerson, billValueNum, tipPercentage);
 }
 
+function numberOfPeopleFocus(numberOfPeople) {
+  numberOfPeople.style.border = "solid var(--Strong-cyan)";
+}
+
 function catnBeZeroOnScreen() {
   if (numberOfPeople.value == 0 || numberOfPeople.value == "") {
     cantBeZero.style.display = "block";
+    numberOfPeople.style.border = "solid #D97E6A";
   } else {
     cantBeZero.style.display = "none";
+    numberOfPeople.style.border = "none";
+    numberOfPeople.addEventListener("mouseover", function() {
+      numberOfPeople.style.border = "solid var(--Strong-cyan)";
+      // numberOfPeopleFocus(numberOfPeople);
+    });
+    numberOfPeople.addEventListener("mouseleave", function() {
+      numberOfPeople.style.border = "none";
+      // numberOfPeopleFocus(numberOfPeople);
+      // numberOfPeople.addEventListener("focus", numberOfPeopleFocus(numberOfPeople));
+    });
+    numberOfPeople.addEventListener("focus", numberOfPeopleFocus(numberOfPeople));
   }
 }
 
